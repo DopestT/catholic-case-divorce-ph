@@ -55,8 +55,9 @@ To resolve the conflicts in PR #1 (copilot/build-static-policy-website), follow 
 # Checkout the PR #1 branch
 git checkout copilot/build-static-policy-website
 
-# Merge main with allow-unrelated-histories flag
-git merge main --allow-unrelated-histories
+# Merge main into the branch
+# Note: Use --allow-unrelated-histories if both branches have completely separate initial commits
+git merge main
 
 # Resolve conflicts by accepting the main branch version for all conflicted files
 git checkout --theirs index.html robots.txt sitemap.xml
