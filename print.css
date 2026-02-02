@@ -1,0 +1,162 @@
+/* ========================================
+   Print Stylesheet
+   Clean, professional print output
+   ======================================== */
+
+@media print {
+    /* === Reset for Print === */
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    body {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+        background: #fff;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* === Hide Navigation & Skip Link === */
+    .skip-link,
+    nav {
+        display: none !important;
+    }
+    
+    /* === Header === */
+    header {
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+    }
+    
+    header h1 {
+        font-size: 24pt;
+        margin-bottom: 5pt;
+    }
+    
+    .tagline {
+        font-size: 12pt;
+        font-style: italic;
+    }
+    
+    /* === Main Content === */
+    main {
+        padding: 0;
+        margin: 0;
+    }
+    
+    /* === Headings === */
+    h2 {
+        font-size: 18pt;
+        margin-top: 20pt;
+        margin-bottom: 10pt;
+        border-bottom: 1px solid #000;
+        padding-bottom: 5pt;
+        page-break-after: avoid;
+    }
+    
+    h3 {
+        font-size: 14pt;
+        margin-top: 15pt;
+        margin-bottom: 8pt;
+        page-break-after: avoid;
+    }
+    
+    /* === Paragraphs === */
+    p {
+        margin-bottom: 10pt;
+        orphans: 3;
+        widows: 3;
+    }
+    
+    /* === Lists === */
+    ul, ol {
+        margin-left: 20pt;
+        margin-bottom: 10pt;
+    }
+    
+    li {
+        margin-bottom: 5pt;
+    }
+    
+    /* === Articles === */
+    article {
+        margin-bottom: 20pt;
+        page-break-inside: avoid;
+    }
+    
+    /* === Links === */
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+    
+    /* Display URLs after links for Sources section */
+    #sources a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 9pt;
+        font-style: italic;
+    }
+    
+    /* === Sections === */
+    section {
+        margin-bottom: 30pt;
+        page-break-inside: avoid;
+    }
+    
+    /* === Share Section === */
+    #share {
+        border-left: 3pt solid #000;
+        padding-left: 15pt;
+        margin-top: 20pt;
+    }
+    
+    .share-url {
+        font-weight: bold;
+        margin: 10pt 0;
+    }
+    
+    /* === Footer === */
+    footer {
+        border-top: 2px solid #000;
+        padding-top: 15pt;
+        margin-top: 30pt;
+        font-size: 10pt;
+    }
+    
+    footer small {
+        font-size: 9pt;
+    }
+    
+    /* === Page Breaks === */
+    h2, h3 {
+        page-break-after: avoid;
+    }
+    
+    article, section {
+        page-break-inside: avoid;
+    }
+    
+    /* Force page break before Sources if needed */
+    #sources {
+        page-break-before: auto;
+    }
+    
+    /* === Print-specific Typography === */
+    body {
+        max-width: 100%;
+        margin: 0;
+        padding: 1cm;
+    }
+    
+    /* === Hide decorative elements === */
+    .share-instruction {
+        font-size: 10pt;
+    }
+}
