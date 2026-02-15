@@ -1,49 +1,111 @@
-<div class="lang-nav">
-    <span>Language / Wika:</span>
-    <a href="index.html" class="active">🇺🇸 English</a>
-    <a href="tagalog.html">🇵🇭 Tagalog</a>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Catholic Case for Divorce | Philippines 2026</title>
+    <style>
+        :root {
+            --primary-blue: #0056b3;
+            --ph-red: #ce1126;
+            --light-gray: #f8f9fa;
+            --dark-text: #333;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--dark-text); margin: 0; padding: 0; }
+        
+        /* Language Switcher */
+        .lang-nav { background: var(--light-gray); padding: 12px 5%; text-align: right; border-bottom: 2px solid var(--primary-blue); position: sticky; top: 0; z-index: 1000; }
+        .lang-nav a { text-decoration: none; margin-left: 15px; font-weight: bold; color: #666; }
+        .lang-nav a.active { color: var(--primary-blue); border-bottom: 2px solid var(--primary-blue); }
 
-<section class="download-container">
-    <h2>Legal Resource Center</h2>
-    <p>Download our comprehensive 2026 policy briefs and legal guides below.</p>
-    
-    <div class="pdf-grid">
-        <div class="pdf-card">
-            <h4>Policy Brief (English)</h4>
-            <p>6-page robust analysis of legal remedies and divorce advocacy.</p>
-            <a href="guide-en.pdf" download>
-                <button class="btn-download">📥 Download English PDF</button>
-            </a>
-        </div>
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero-image.jpg'); /* Ensure you upload your hero image */
+                background-size: cover; background-position: center; height: 60vh; display: flex; align-items: center; justify-content: center; color: white; text-align: center; padding: 0 20px; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
 
-        <div class="pdf-card">
-            <h4>Gabay sa Batas (Tagalog)</h4>
-            <p>Komprehensibong paliwanag sa karapatan ng pamilyang iniwan.</p>
-            <a href="guide-tl.pdf" download>
-                <button class="btn-download btn-ph">📥 I-download ang Tagalog PDF</button>
-            </a>
-        </div>
+        /* Main Content */
+        .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
+        .intro-text { font-size: 1.2rem; text-align: center; color: #555; margin-bottom: 50px; }
+
+        /* Resource Grid */
+        .pdf-section { background: var(--light-gray); padding: 40px 20px; border-radius: 12px; margin-bottom: 50px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; }
+        .card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
+        
+        .btn { display: inline-block; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 15px; cursor: pointer; border: none; transition: 0.3s; width: 100%; }
+        .btn-blue { background: var(--primary-blue); color: white; }
+        .btn-red { background: var(--ph-red); color: white; }
+        .btn-dark { background: #333; color: white; }
+
+        /* Evidence Image */
+        .evidence-preview { text-align: center; margin-top: 60px; }
+        .evidence-preview img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+
+        /* Call to Action */
+        .cta { background: var(--primary-blue); color: white; padding: 60px 20px; text-align: center; margin-top: 50px; }
+        
+        /* Footer */
+        footer { background: #222; color: #aaa; padding: 40px 20px; font-size: 13px; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <div class="lang-nav">
+        <span>Language / Wika:</span>
+        <a href="index.html" class="active">🇺🇸 English</a>
+        <a href="tagalog.html">🇵🇭 Tagalog</a>
     </div>
-</section>
 
-<footer class="legal-footer">
-    <p><strong>Disclaimer:</strong> This website is for informational purposes only. As of 2026, Absolute Divorce is not yet recognized for non-Muslims in the Philippines. This site does not provide official legal advice; please consult the Public Attorney's Office (PAO) for case-specific help.</p>
-</footer>
+    <section class="hero">
+        <div>
+            <h1>Justice for the Abandoned Family</h1>
+            <p>Advocating for Civil Divorce and Legal Rights in the Philippines (2026)</p>
+        </div>
+    </section>
 
-<style>
-    /* Professional Layout Styles */
-    .lang-nav { background: #f8f9fa; padding: 12px; text-align: right; border-bottom: 2px solid #0056b3; position: sticky; top: 0; z-index: 1000; font-family: Arial, sans-serif; }
-    .lang-nav a { text-decoration: none; margin-left: 15px; font-weight: bold; color: #666; }
-    .lang-nav a.active { color: #0056b3; border-bottom: 2px solid #0056b3; }
+    <div class="container">
+        <p class="intro-text">
+            Marriage is a sacred bond, but the law must protect the vulnerable when that bond is broken by abuse or abandonment. Our mission is to provide every Filipino with the legal resources to seek justice.
+        </p>
 
-    .download-container { text-align: center; padding: 40px 20px; background: #fff; font-family: Arial, sans-serif; }
-    .pdf-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
-    .pdf-card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; width: 300px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-    
-    .btn-download { background: #0056b3; color: white; border: none; padding: 12px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; width: 100%; transition: 0.3s; }
-    .btn-ph { background: #ce1126; }
-    .btn-download:hover { opacity: 0.8; }
+        <section class="pdf-section">
+            <h2 style="text-align: center;">Official Resource Center</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🏛 Legal Rights Guide</h3>
+                    <p>A robust 6-page briefing on VAWC, Concubinage, and the roadmap to legal support.</p>
+                    <a href="guide-en.pdf" class="btn btn-blue" download>Download English PDF</a>
+                    <a href="guide-tl.pdf" class="btn btn-red" download>I-download ang Tagalog PDF</a>
+                </div>
 
-    .legal-footer { background: #333; color: #ccc; padding: 30px; font-size: 13px; text-align: center; margin-top: 50px; line-height: 1.6; }
-</style>
+                <div class="card">
+                    <h3>✝️ The Catholic Case</h3>
+                    <p>Understanding why civil divorce is a compassionate solution compatible with faith.</p>
+                    <a href="catholic-en.pdf" class="btn btn-dark" download>Read Policy Brief (EN)</a>
+                    <a href="catholic-tl.pdf" class="btn btn-dark" download>Basahin ang Gabay (TL)</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="evidence-preview">
+            <h2>Preparation for Legal Action</h2>
+            <p>Use the checklist below to organize the evidence required by Philippine courts.</p>
+            <img src="evidence-table.png" alt="Table of Required Evidence">
+            <a href="evidence-table.png" class="btn btn-blue" style="width: auto; margin-top: 20px;" download>Download Evidence Image</a>
+        </section>
+    </div>
+
+    <section class="cta">
+        <h2>Help Us Break the Silence</h2>
+        <p>Information is the first step toward justice. Share these guides with your local Barangay or community.</p>
+        <button onclick="window.print()" class="btn btn-dark" style="width: auto; margin-right: 10px;">🖨️ Print Page</button>
+        <button onclick="navigator.share({title: 'Catholic Case for Divorce', url: window.location.href})" class="btn btn-dark" style="width: auto; background: #28a745;">📲 Share Site</button>
+    </section>
+
+    <footer>
+        <p><strong>Disclaimer:</strong> This website is for informational purposes only and does not constitute official legal advice. As of 2026, Absolute Divorce is not yet recognized for non-Muslims in the Philippines. Please consult a licensed attorney or the Public Attorney's Office (PAO) for legal assistance.</p>
+        <p>&copy; 2026 Catholic Case Divorce PH Advocacy</p>
+    </footer>
+
+</body>
+</html>
