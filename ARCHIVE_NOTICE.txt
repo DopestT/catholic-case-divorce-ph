@@ -1,0 +1,26 @@
+REPOSITORY ARCHIVE NOTICE
+=========================
+
+This repository has been archived as of February 15, 2026.
+
+WHAT THIS MEANS:
+- The repository is now read-only
+- No new issues, pull requests, or changes will be accepted
+- The content remains available for historical reference and research
+- All existing content, documentation, and resources remain accessible
+
+REASON FOR ARCHIVAL:
+This project has reached the end of its active development lifecycle.
+
+CONTACT:
+For questions or concerns about this archived content, please refer to the 
+repository owner's contact information on their GitHub profile.
+
+ACCESSING CONTENT:
+All files, documentation, and resources remain available in this repository.
+You can:
+- Browse all files and commit history
+- Download or clone the repository
+- Fork the repository if you wish to continue development independently
+
+Last Updated: February 15, 2026

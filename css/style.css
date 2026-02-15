@@ -9,6 +9,17 @@ body {
     background-color: #ffffff; 
 }
 
+.archive-banner {
+    background-color: #fef3c7;
+    border: 2px solid #f59e0b;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+    color: #92400e;
+}
+
 .nav { 
     text-align: right; 
     margin-bottom: 20px; 
