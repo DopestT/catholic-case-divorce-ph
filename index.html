@@ -3,63 +3,747 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Catholic Case for Civil Divorce | Philippines</title>
+    <title>The Catholic Case for Civil Divorce in the Philippines</title>
     <style>
-        :root { --primary: #004a99; --accent: #ce1126; --bg: #f4f7f9; }
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; color: #333; line-height: 1.6; margin: 0; background: var(--bg); }
-        .nav-bar { background: #fff; padding: 15px 5%; display: flex; justify-content: flex-end; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
-        .nav-bar a { text-decoration: none; color: #666; font-weight: bold; margin-left: 20px; font-size: 14px; }
-        .nav-bar a.active { color: var(--primary); border-bottom: 2px solid var(--primary); }
-
-        /* THE HERO HEADER - This is what was missing */
-        .hero { 
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero-image.jpg');
-            background-size: cover; background-position: center; height: 450px;
-            display: flex; flex-direction: column; justify-content: center; align-items: center;
-            color: white; text-align: center; padding: 20px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .hero h1 { font-size: 3rem; margin: 0; text-transform: uppercase; letter-spacing: 2px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
         
-        .container { max-width: 1000px; margin: -60px auto 60px; padding: 0 20px; position: relative; }
-        .main-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f8f9fa;
+        }
         
-        .resource-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 30px; }
-        .res-card { border: 1px solid #eee; padding: 25px; border-radius: 8px; background: #fff; }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
         
-        .btn { display: block; text-align: center; padding: 14px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 15px; color: white; }
-        .btn-en { background: var(--primary); }
-        .btn-tl { background: var(--accent); }
-
-        footer { text-align: center; padding: 40px; font-size: 12px; color: #888; }
+        /* Language Toggle */
+        .lang-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            display: flex;
+            overflow: hidden;
+            border: 2px solid #1e3a8a;
+        }
+        
+        .lang-btn {
+            padding: 10px 20px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: all 0.3s;
+            color: #1e3a8a;
+        }
+        
+        .lang-btn.active {
+            background: #1e3a8a;
+            color: white;
+        }
+        
+        .lang-btn:hover:not(.active) {
+            background: #f1f5f9;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+        
+        header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+            font-style: italic;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .badge-bar {
+            background: #f1f5f9;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85em;
+            color: #475569;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .badge::before {
+            content: "✓";
+            background: #10b981;
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7em;
+        }
+        
+        main {
+            padding: 50px 40px;
+        }
+        
+        /* Hero Image Section */
+        .hero-image-section {
+            margin: -50px -40px 40px -40px;
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            padding: 40px;
+            color: white;
+        }
+        
+        .hero-caption {
+            font-style: italic;
+            font-size: 1.1em;
+            max-width: 600px;
+        }
+        
+        .intro-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 25px;
+            margin-bottom: 40px;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .intro-box p {
+            font-size: 1.1em;
+            color: #92400e;
+            margin: 0;
+        }
+        
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8em;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        h3 {
+            color: #3730a3;
+            font-size: 1.3em;
+            margin: 30px 0 15px 0;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+        
+        .highlight-list {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .highlight-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .highlight-list li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .highlight-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .highlight-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #dc2626;
+            font-weight: bold;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #dc2626;
+            display: block;
+        }
+        
+        .stat-label {
+            color: #64748b;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .stat-source {
+            font-size: 0.75em;
+            color: #94a3b8;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        th {
+            background: #1e3a8a;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        
+        .doctrine-box {
+            background: #ecfdf5;
+            border: 2px solid #10b981;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        
+        .doctrine-box h3 {
+            color: #047857;
+            margin-top: 0;
+        }
+        
+        .citation {
+            background: #f0fdf4;
+            border-left: 4px solid #10b981;
+            padding: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #1f2937;
+        }
+        
+        .comparison-table th {
+            background: #3730a3;
+        }
+        
+        .comparison-table .yes {
+            color: #059669;
+            font-weight: bold;
+        }
+        
+        .comparison-table .no {
+            color: #dc2626;
+        }
+        
+        .download-section {
+            background: #1e3a8a;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin: 50px -40px -50px -40px;
+        }
+        
+        .download-section h2 {
+            color: white;
+            border-bottom: none;
+            margin-top: 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #f59e0b;
+            color: #1e3a8a;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin: 10px;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #fbbf24;
+        }
+        
+        .sources {
+            background: #f1f5f9;
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+        
+        .sources h3 {
+            margin-top: 0;
+        }
+        
+        .sources ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .sources li {
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .sources li::before {
+            content: "•";
+            color: #1e3a8a;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        footer {
+            background: #1e293b;
+            color: #94a3b8;
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            .lang-toggle {
+                top: 10px;
+                right: 10px;
+            }
+            
+            .lang-btn {
+                padding: 8px 15px;
+                font-size: 0.8em;
+            }
+            
+            header {
+                padding: 60px 20px 40px 20px;
+            }
+            
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            main {
+                padding: 30px 20px;
+            }
+            
+            .hero-image-section {
+                margin: -30px -20px 30px -20px;
+                height: 300px;
+            }
+            
+            .badge-bar {
+                padding: 15px 20px;
+                gap: 15px;
+            }
+            
+            .download-section {
+                margin: 40px -20px -30px -20px;
+                padding: 30px 20px;
+            }
+        }
     </style>
 </head>
 <body>
-    <nav class="nav-bar">
-        <a href="index.html" class="active">ENGLISH</a>
-        <a href="tagalog.html">TAGALOG</a>
-    </nav>
-    <header class="hero">
-        <h1>Justice for the Abandoned</h1>
-        <p>A civil-law policy resource for the Philippines.</p>
-    </header>
-    <main class="container">
-        <div class="main-card">
-            <h2>Why This Matters</h2>
-            <p>The absence of absolute divorce traps victims in abusive marriages. This resource provides the legal and religious context for reform.</p>
-            <div class="resource-grid">
-                <div class="res-card">
-                    <h3>🏛 Legal Briefs</h3>
-                    <a href="guide-en.pdf" class="btn btn-en" download>Download English Guide</a>
-                    <a href="guide-tl.pdf" class="btn btn-tl" download>Gabay sa Tagalog</a>
-                </div>
-                <div class="res-card">
-                    <h3>✝️ Faith Advocacy</h3>
-                    <a href="catholic-en.pdf" class="btn btn-en" download>Catholic Case (EN)</a>
-                    <a href="catholic-tl.pdf" class="btn btn-tl" download>Gabay sa Simbahan (TL)</a>
+    <!-- Language Toggle -->
+    <div class="lang-toggle">
+        <button class="lang-btn active" id="btn-en">English</button>
+        <button class="lang-btn" id="btn-tl">Tagalog</button>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1 id="title">The Catholic Case for Civil Divorce in the Philippines</h1>
+            <p class="subtitle" id="subtitle">A civil-law policy resource for legislators considering the Absolute Divorce Bill — grounded in human dignity, Catholic social teaching, and the common good.</p>
+        </header>
+        
+        <div class="badge-bar">
+            <span class="badge" id="badge1">Civil law only</span>
+            <span class="badge" id="badge2">Staffer-forwardable</span>
+            <span class="badge" id="badge3">Primary sources + stats</span>
+            <span class="badge" id="badge4">Doctrine respected</span>
+        </div>
+        
+        <main>
+            <!-- Hero Image using your uploaded image -->
+            <div class="hero-image-section">
+                <img src="hero-woman.jpg" alt="Filipino woman with legal documents" class="hero-image" id="hero-img">
+                <div class="hero-overlay">
+                    <p class="hero-caption" id="hero-caption">Every year, thousands of Filipino women remain trapped in broken marriages without legal recourse. The Absolute Divorce Bill offers a path to dignity and protection.</p>
                 </div>
             </div>
-        </div>
-    </main>
-    <footer>&copy; 2026 Catholic Case for Civil Divorce Advocacy Hub</footer>
+            
+            <div class="intro-box">
+                <p id="intro-text"><strong>This resource addresses civil law only.</strong> It does not challenge Catholic doctrine on sacramental marriage. It focuses on the state's duty to protect legal rights, children, and personal dignity when a marriage is irreparably broken.</p>
+            </div>
+            
+            <h2 id="section1-title">I. Why This Matters in Practice</h2>
+            <p id="section1-p1">The absence of absolute divorce does not prevent marital breakdown. It changes who is allowed to recover from it.</p>
+            <p id="section1-p2">In practice, the current framework:</p>
+            
+            <div class="highlight-list">
+                <ul>
+                    <li id="li1"><strong>Traps women</strong> in abusive or permanently abandoned marriages.</li>
+                    <li id="li2"><strong>Disproportionately harms the poor</strong> by making legal relief effectively paywalled.</li>
+                    <li id="li3"><strong>Forces legal gray zones</strong> that undermine respect for law (void foreign marriages, bigamy risk, unstable custody/support arrangements).</li>
+                    <li id="li4"><strong>Creates dependence on foreigners</strong> by making legal capacity to remarry hinge on a foreign spouse's divorce and subsequent recognition.</li>
+                </ul>
+            </div>
+            
+            <h2 id="section2-title">II. Key National Indicators</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">17.5%</span>
+                    <div class="stat-label" id="stat1">IPV Prevalence</div>
+                    <div class="stat-source">2022 NDHS (PSA)</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">2.19M</span>
+                    <div class="stat-label" id="stat2">OFWs (2024)</div>
+                    <div class="stat-source">PSA via GMA</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">50%</span>
+                    <div class="stat-label" id="stat3">Public Support</div>
+                    <div class="stat-source">SWS Survey 2024</div>
+                </div>
+            </div>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th id="th1">Indicator</th>
+                        <th id="th2">What it shows</th>
+                        <th id="th3">Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong id="row1-title">17.5% IPV prevalence</strong></td>
+                        <td id="row1-desc">17.5% of Filipino women age 15–49 experienced physical/sexual/emotional intimate partner violence (2022 NDHS).</td>
+                        <td>PCW summary of 2022 NDHS (PSA)</td>
+                    </tr>
+                    <tr>
+                        <td><strong id="row2-title">OFWs: 2.19 million (2024)</strong></td>
+                        <td id="row2-desc">Long-term separations are structurally common; civil-law clarity and protection matter for spouses and children.</td>
+                        <td>PSA-reported figure via GMA (Dec 2025)</td>
+                    </tr>
+                    <tr>
+                        <td><strong id="row3-title">Public opinion (SWS)</strong></td>
+                        <td id="row3-desc">Survey (Mar 21–25, 2024): 50% agree, 31% disagree, 17% undecided on allowing divorce for irreconcilably separated couples.</td>
+                        <td>GMA report of SWS results</td>
+                    </tr>
+                    <tr>
+                        <td><strong id="row4-title">Bill text (House)</strong></td>
+                        <td id="row4-desc">Primary text (HB 9349) describing limited grounds, judicial procedures, child provisions, and stated goals.</td>
+                        <td>House Bill 9349 PDF</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2 id="section3-title">III. Catholic Teaching and the State's Limited Role</h2>
+            <p id="section3-p1">Catholic doctrine upholds the indissolubility of sacramental marriage. The civil state, however, regulates civil effects: property, custody, support, legal capacity, and public order.</p>
+            
+            <div class="doctrine-box">
+                <h3 id="doctrine-title">Catechism reference (primary)</h3>
+                <div class="citation">
+                    <strong>CCC §2383:</strong> <span id="citation-text">If civil divorce remains the only possible way of ensuring certain legal rights, the care of the children, or the protection of inheritance, it can be tolerated and does not constitute a moral offense.</span>
+                </div>
+                <p style="margin-bottom: 0; font-size: 0.9em;"><strong id="source-label">Source:</strong> Vatican text (CCC 2383)</p>
+            </div>
+            
+            <h3 id="legislators-title">What legislators are deciding</h3>
+            <p id="legislators-text">Not whether the sacrament changes — it does not. The question is whether the State continues enforcing civil bondage in situations where protection of dignity, children, and legal rights require a civil remedy.</p>
+            
+            <h2 id="section4-title">IV. What the Absolute Divorce Bill Does — and Does Not Do</h2>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th id="comp-th1">Provides (Civil Effects)</th>
+                        <th id="comp-th2">Does Not Provide</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="yes" id="comp1-yes">✓ Judicial civil dissolution for irreparably broken marriages (limited grounds)</td>
+                        <td class="no" id="comp1-no">✗ Changes to Catholic sacramental theology</td>
+                    </tr>
+                    <tr>
+                        <td class="yes" id="comp2-yes">✓ Protection for abused or abandoned spouses</td>
+                        <td class="no" id="comp2-no">✗ Forced divorce</td>
+                    </tr>
+                    <tr>
+                        <td class="yes" id="comp3-yes">✓ Clear provisions on custody, child support, and property settlement</td>
+                        <td class="no" id="comp3-no">✗ Compulsion to remarry</td>
+                    </tr>
+                    <tr>
+                        <td class="yes" id="comp4-yes">✓ Reduced legal gray zones and improved respect for law</td>
+                        <td class="no" id="comp4-no">✗ Interference with personal conscience</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2 id="section5-title">V. Primary Sources</h2>
+            <div class="sources">
+                <ul>
+                    <li id="source1">House Bill 9349 (Absolute Divorce Act) — PDF</li>
+                    <li id="source2">Senate LIS page for HBN-9349 (status + references)</li>
+                    <li id="source3">PCW: Violence Against Women (citing 2022 NDHS / PSA)</li>
+                    <li id="source4">Vatican: Catechism §2383</li>
+                    <li id="source5">SWS survey results reported by GMA</li>
+                    <li id="source6">PSA OFW count (2024) reported by GMA</li>
+                </ul>
+            </div>
+            
+            <div class="download-section">
+                <h2 id="download-title">Download the Policy Brief</h2>
+                <p id="download-text">Attach this PDF to legislative emails for quick review.</p>
+                <a href="policy-brief.pdf" class="btn" id="download-btn">Download PDF</a>
+                <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.8;" id="download-tip">Tip: Host the PDF in the same folder as this page so the button works immediately.</p>
+            </div>
+        </main>
+        
+        <footer>
+            <p id="footer-text">A policy resource for legislative consideration • 2026</p>
+        </footer>
+    </div>
+
+    <script>
+        const translations = {
+            en: {
+                title: "The Catholic Case for Civil Divorce in the Philippines",
+                subtitle: "A civil-law policy resource for legislators considering the Absolute Divorce Bill — grounded in human dignity, Catholic social teaching, and the common good.",
+                badge1: "Civil law only",
+                badge2: "Staffer-forwardable",
+                badge3: "Primary sources + stats",
+                badge4: "Doctrine respected",
+                heroCaption: "Every year, thousands of Filipino women remain trapped in broken marriages without legal recourse. The Absolute Divorce Bill offers a path to dignity and protection.",
+                introText: "<strong>This resource addresses civil law only.</strong> It does not challenge Catholic doctrine on sacramental marriage. It focuses on the state's duty to protect legal rights, children, and personal dignity when a marriage is irreparably broken.",
+                section1Title: "I. Why This Matters in Practice",
+                section1P1: "The absence of absolute divorce does not prevent marital breakdown. It changes who is allowed to recover from it.",
+                section1P2: "In practice, the current framework:",
+                li1: "<strong>Traps women</strong> in abusive or permanently abandoned marriages.",
+                li2: "<strong>Disproportionately harms the poor</strong> by making legal relief effectively paywalled.",
+                li3: "<strong>Forces legal gray zones</strong> that undermine respect for law (void foreign marriages, bigamy risk, unstable custody/support arrangements).",
+                li4: "<strong>Creates dependence on foreigners</strong> by making legal capacity to remarry hinge on a foreign spouse's divorce and subsequent recognition.",
+                section2Title: "II. Key National Indicators",
+                stat1: "IPV Prevalence",
+                stat2: "OFWs (2024)",
+                stat3: "Public Support",
+                th1: "Indicator",
+                th2: "What it shows",
+                th3: "Source",
+                row1Title: "17.5% IPV prevalence",
+                row1Desc: "17.5% of Filipino women age 15–49 experienced physical/sexual/emotional intimate partner violence (2022 NDHS).",
+                row2Title: "OFWs: 2.19 million (2024)",
+                row2Desc: "Long-term separations are structurally common; civil-law clarity and protection matter for spouses and children.",
+                row3Title: "Public opinion (SWS)",
+                row3Desc: "Survey (Mar 21–25, 2024): 50% agree, 31% disagree, 17% undecided on allowing divorce for irreconcilably separated couples.",
+                row4Title: "Bill text (House)",
+                row4Desc: "Primary text (HB 9349) describing limited grounds, judicial procedures, child provisions, and stated goals.",
+                section3Title: "III. Catholic Teaching and the State's Limited Role",
+                section3P1: "Catholic doctrine upholds the indissolubility of sacramental marriage. The civil state, however, regulates civil effects: property, custody, support, legal capacity, and public order.",
+                doctrineTitle: "Catechism reference (primary)",
+                citationText: "If civil divorce remains the only possible way of ensuring certain legal rights, the care of the children, or the protection of inheritance, it can be tolerated and does not constitute a moral offense.",
+                sourceLabel: "Source:",
+                legislatorsTitle: "What legislators are deciding",
+                legislatorsText: "Not whether the sacrament changes — it does not. The question is whether the State continues enforcing civil bondage in situations where protection of dignity, children, and legal rights require a civil remedy.",
+                section4Title: "IV. What the Absolute Divorce Bill Does — and Does Not Do",
+                compTh1: "Provides (Civil Effects)",
+                compTh2: "Does Not Provide",
+                comp1Yes: "✓ Judicial civil dissolution for irreparably broken marriages (limited grounds)",
+                comp1No: "✗ Changes to Catholic sacramental theology",
+                comp2Yes: "✓ Protection for abused or abandoned spouses",
+                comp2No: "✗ Forced divorce",
+                comp3Yes: "✓ Clear provisions on custody, child support, and property settlement",
+                comp3No: "✗ Compulsion to remarry",
+                comp4Yes: "✓ Reduced legal gray zones and improved respect for law",
+                comp4No: "✗ Interference with personal conscience",
+                section5Title: "V. Primary Sources",
+                source1: "House Bill 9349 (Absolute Divorce Act) — PDF",
+                source2: "Senate LIS page for HBN-9349 (status + references)",
+                source3: "PCW: Violence Against Women (citing 2022 NDHS / PSA)",
+                source4: "Vatican: Catechism §2383",
+                source5: "SWS survey results reported by GMA",
+                source6: "PSA OFW count (2024) reported by GMA",
+                downloadTitle: "Download the Policy Brief",
+                downloadText: "Attach this PDF to legislative emails for quick review.",
+                downloadBtn: "Download PDF",
+                downloadTip: "Tip: Host the PDF in the same folder as this page so the button works immediately.",
+                footerText: "A policy resource for legislative consideration • 2026"
+            },
+            tl: {
+                title: "Ang Kaso ng Katoliko para sa Sibil na Diborsyo sa Pilipinas",
+                subtitle: "Isang mapagkukunan ng patakaran sa sibil na batas para sa mga mambabatas na nag-iisip sa Absolute Divorce Bill — nakasalig sa dignidad ng tao, aral ng Katolikong panlipunan, at kabutihan ng lahat.",
+                badge1: "Sibil na batas lamang",
+                badge2: "Maaaring ipasa sa staff",
+                badge3: "Mga pinagkukunan at estadistika",
+                badge4: "Ginagalang ang doktrina",
+                heroCaption: "Taun-taon, libo-libong kababaihang Pilipino ang nananatiling nakakulong sa sirang pag-aasawa nang walang legal na lunas. Ang Absolute Divorce Bill ay nagbibigay ng daan patungo sa dignidad at proteksyon.",
+                introText: "<strong>Ang mapagkukuhang ito ay tumatalakay sa sibil na batas lamang.</strong> Hindi ito sumasalungat sa doktrina ng Katoliko tungkol sa sakramental na pag-aasawa. Nakatuon ito sa tungkulin ng estado na protektahan ang mga legal na karapatan, mga anak, at personal na dignidad kapag ang pag-aasawa ay hindi na maayos.",
+                section1Title: "I. Bakit Mahalaga Ito sa Pagsasagawa",
+                section1P1: "Ang kawalan ng ganap na diborsyo ay hindi pinipigilan ang pagkasira ng pag-aasawa. Pinababago nito kung sino ang pinapayagang bumangon mula dito.",
+                section1P2: "Sa pagsasagawa, ang kasalukuyang balangkas ay:",
+                li1: "<strong>Nakakulong ang mga kababaihan</strong> sa mga abusado o permanenteng pinabayaang pag-aasawa.",
+                li2: "<strong>Di-proposyonal na sumasama sa mahihirap</strong> sa pamamagitan ng paggawa ng legal na lunas na halos hindi abot.",
+                li3: "<strong>Pumipilit sa mga abong legal na sona</strong> na humihina sa paggalang sa batas (bawal na dayuhang pag-aasawa, panganib ng bigamya, hindi matatag na pag-aalaga/suporta).",
+                li4: "<strong>Lumilikha ng pagdepende sa mga dayuhan</strong> sa pamamagitan ng paggawa ng legal na kakayahang mag-asawa ulit na nakadepende sa diborsyo ng dayuhang asawa at kasunod na pagkilala.",
+                section2Title: "II. Mga Pangunahing Pambansang Tagapagpahiwatig",
+                stat1: "Prevalensya ng IPV",
+                stat2: "OFW (2024)",
+                stat3: "Suporta ng Publiko",
+                th1: "Tagapagpahiwatig",
+                th2: "Ano ang ipinakikita",
+                th3: "Pinagkukunan",
+                row1Title: "17.5% Prevalensya ng IPV",
+                row1Desc: "17.5% ng mga babaeng Pilipino edad 15–49 ang nakaranas ng pisikal/sekswal/emosyonal na karahasan mula sa intimate partner (2022 NDHS).",
+                row2Title: "OFW: 2.19 milyon (2024)",
+                row2Desc: "Ang pangmatagalang paghihiwalay ay karaniwang istruktural; mahalaga ang kaliwanagan at proteksyon ng sibil na batas para sa mga asawa at anak.",
+                row3Title: "Opinyon ng publiko (SWS)",
+                row3Desc: "Sarbey (Mar 21–25, 2024): 50% sumasang-ayon, 31% hindi sumasang-ayon, 17% hindi pa desidido sa pagpayag ng diborsyo para sa mga di-magkasundong mag-asawa.",
+                row4Title: "Teksto ng Bill (House)",
+                row4Desc: "Pangunahing teksto (HB 9349) na naglalarawan ng limitadong mga batayan, pamamaraang panghukuman, mga probisyon sa bata, at mga tinukoy na layunin.",
+                section3Title: "III. Aral ng Katoliko at Limitadong Tungkulin ng Estado",
+                section3P1: "Ang doktrina ng Katoliko ay nagpapanatili ng hindi maaaring buwagin na sakramental na pag-aasawa. Ang sibil na estado, gayunpaman, ay nagreregulate ng mga epekto ng sibil na batas: ari-arian, pag-aalaga, suporta, legal na kapasidad, at kaayusan ng publiko.",
+                doctrineTitle: "Sanggunian sa Katekismo (pangunahin)",
+                citationText: "Kung ang sibil na diborsyo ay nananatiling tanging posibleng paraan upang matiyak ang ilang legal na karapatan, ang pag-aalaga sa mga anak, o ang proteksyon ng mana, maaari itong tiisin at hindi bumubuo ng moral na pagkakasala.",
+                sourceLabel: "Pinagkukunan:",
+                legislatorsTitle: "Ang desisyon ng mga mambabatas",
+                legislatorsText: "Hindi kung ang sakramento ay magbabago — hindi ito magbabago. Ang tanong ay kung ang Estado ay magpapatuloy sa pagpapatupad ng sibil na pagkaalipin sa mga sitwasyon kung saan ang proteksyon ng dignidad, mga anak, at legal na karapatan ay nangangailangan ng sibil na lunas.",
+                section4Title: "IV. Ang Ginagawa ng Absolute Divorce Bill — at Ang Hindi Nito Ginagawa",
+                compTh1: "Nagbibigay (Mga Epekto ng Sibil na Batas)",
+                compTh2: "Hindi Nagbibigay",
+                comp1Yes: "✓ Hukumang sibil na pagpapawalang-bisa para sa hindi na maayos na pag-aasawa (limitadong mga batayan)",
+                comp1No: "✗ Mga pagbabago sa teolohiya ng sakramental na Katoliko",
+                comp2Yes: "✓ Proteksyon para sa mga inabuso o pinabayaang asawa",
+                comp2No: "✗ Sapilitang diborsyo",
+                comp3Yes: "✓ Maliwanag na mga probisyon sa pag-aalaga, suporta sa bata, at pag-aayos ng ari-arian",
+                comp3No: "✗ Pamimilit na mag-asawa ulit",
+                comp4Yes: "✓ Binabawasang mga abong legal na sona at pinapahusay na paggalang sa batas",
+                comp4No: "✗ Pagkikialam sa personal na konsensya",
+                section5Title: "V. Mga Pangunahing Pinagkukunan",
+                source1: "House Bill 9349 (Absolute Divorce Act) — PDF",
+                source2: "Senate LIS page para sa HBN-9349 (status + mga sanggunian)",
+                source3: "PCW: Karahasan Laban sa Kababaihan (citing 2022 NDHS / PSA)",
+                source4: "Vatican: Katekismo §2383",
+                source5: "Mga resulta ng SWS survey na iniulat ng GMA",
+                source6: "PSA bilang ng OFW (2024) na iniulat ng GMA",
+                downloadTitle: "I-download ang Policy Brief",
+                downloadText: "Ilakip ang PDF na ito sa mga email sa lehislatura para sa mabilis na pagsusuri.",
+                downloadBtn: "I-download ang PDF",
+                downloadTip: "Tip: I-host ang PDF sa parehong folder ng pahinang ito para gumana agad ang button.",
+                footerText: "Isang mapagkukunan ng patakaran para sa pagsasaalang-alang ng lehislatura • 2026"
+            }
+        };
+
+        let currentLang = 'en';
+
+        function switchLanguage(lang) {
+            currentLang = lang;
+            const t = translations[lang];
+            
+            // Update buttons
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-tl').classList.toggle('active', lang === 'tl');
+            
+            // Update all text elements
+            Object.keys(t).forEach(key => {
+                const el = document.getElementById(key);
+                if (el) {
+                    el.innerHTML = t[key];
+                }
+            });
+            
+            // Update html lang attribute
+            document.documentElement.lang = lang === 'tl' ? 'tl' : 'en';
+        }
+
+        // Event listeners
+        document.getElementById('btn-en').addEventListener('click', () => switchLanguage('en'));
+        document.getElementById('btn-tl').addEventListener('click', () => switchLanguage('tl'));
+    </script>
 </body>
 </html>
