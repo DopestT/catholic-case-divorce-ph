@@ -1,3 +1,2 @@
 User-agent: *
-Allow: /
-Sitemap: https://dopestt.github.io/catholic-case-divorce-ph/sitemap.xml
+Disallow:
