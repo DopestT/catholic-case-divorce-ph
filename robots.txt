@@ -1,2 +1,3 @@
+# This site is archived and no longer maintained
 User-agent: *
 Disallow:
