@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ang Katolikong Pananaw sa Diborsyo | Pilipinas 2026</title>
+    <style>
+        :root {
+            --primary-blue: #0056b3;
+            --ph-red: #ce1126;
+            --light-gray: #f8f9fa;
+            --dark-text: #333;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--dark-text); margin: 0; padding: 0; }
+        
+        /* Language Switcher */
+        .lang-nav { background: var(--light-gray); padding: 12px 5%; text-align: right; border-bottom: 2px solid var(--ph-red); position: sticky; top: 0; z-index: 1000; }
+        .lang-nav a { text-decoration: none; margin-left: 15px; font-weight: bold; color: #666; }
+        .lang-nav a.active { color: var(--ph-red); border-bottom: 2px solid var(--ph-red); }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero-image.jpg'); 
+                background-size: cover; background-position: center; height: 60vh; display: flex; align-items: center; justify-content: center; color: white; text-align: center; padding: 0 20px; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+
+        /* Main Content */
+        .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
+        .intro-text { font-size: 1.2rem; text-align: center; color: #555; margin-bottom: 50px; }
+
+        /* Resource Grid */
+        .pdf-section { background: var(--light-gray); padding: 40px 20px; border-radius: 12px; margin-bottom: 50px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; }
+        .card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
+        
+        .btn { display: inline-block; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 15px; cursor: pointer; border: none; transition: 0.3s; width: 100%; }
+        .btn-blue { background: var(--primary-blue); color: white; }
+        .btn-red { background: var(--ph-red); color: white; }
+        .btn-dark { background: #333; color: white; }
+
+        /* Evidence Image */
+        .evidence-preview { text-align: center; margin-top: 60px; }
+        .evidence-preview img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+
+        /* Call to Action */
+        .cta { background: var(--ph-red); color: white; padding: 60px 20px; text-align: center; margin-top: 50px; }
+        
+        /* Footer */
+        footer { background: #222; color: #aaa; padding: 40px 20px; font-size: 13px; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <div class="lang-nav">
+        <span>Language / Wika:</span>
+        <a href="index.html">🇺🇸 English</a>
+        <a href="tagalog.html" class="active">🇵🇭 Tagalog</a>
+    </div>
+
+    <section class="hero">
+        <div>
+            <h1>Katarungan para sa Iniwang Pamilya</h1>
+            <p>Pagtatanggol sa Karapatan at Civil Divorce sa Pilipinas (2026)</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <p class="intro-text">
+            Ang kasal ay isang sagradong panata, ngunit dapat protektahan ng batas ang mga biktima ng pang-aabuso at pag-iwan. Ang aming layunin ay magbigay ng legal na kaalaman para sa bawat Pilipinong naghahanap ng katarungan.
+        </p>
+
+        <section class="pdf-section">
+            <h2 style="text-align: center;">Sentro ng Impormasyon</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🏛 Gabay sa Karapatan</h3>
+                    <p>Isang komprehensibong 6-pahinang gabay tungkol sa VAWC, Concubinage, at sustento.</p>
+                    <a href="guide-tl.pdf" class="btn btn-red" download>I-download ang Tagalog PDF</a>
+                    <a href="guide-en.pdf" class="btn btn-blue" download>Download English PDF</a>
+                </div>
+
+                <div class="card">
+                    <h3>✝️ Ang Katolikong Pananaw</h3>
+                    <p>Pag-unawa kung bakit ang civil divorce ay isang makataong solusyon na naaayon sa pananampalataya.</p>
+                    <a href="catholic-tl.pdf" class="btn btn-dark" download>Basahin ang Gabay (TL)</a>
+                    <a href="catholic-en.pdf" class="btn btn-dark" download>Read Policy Brief (EN)</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="evidence-preview">
+            <h2>Paghahanda para sa Legal na Aksyon</h2>
+            <p>Gamitin ang talaan sa ibaba para ayusin ang mga ebidensyang kailangan sa mga korte sa Pilipinas.</p>
+            <img src="evidence-table-tl.png" alt="Talaan ng Ebidensya">
+            <a href="evidence-table-tl.png" class="btn btn-red" style="width: auto; margin-top: 20px;" download>I-download ang Imahe</a>
+        </section>
+    </div>
+
+    <section class="cta">
+        <h2>Tulong para sa Katotohanan</h2>
+        <p>Ang kaalaman ay ang unang hakbang tungo sa katarungan. Ibahagi ang mga gabay na ito sa iyong lokal na Barangay o komunidad.</p>
+        <button onclick="window.print()" class="btn btn-dark" style="width: auto; margin-right: 10px;">🖨️ I-print ang Pahina</button>
+        <button onclick="navigator.share({title: 'Katolikong Pananaw sa Diborsyo', url: window.location.href})" class="btn btn-dark" style="width: auto; background: #28a745;">📲 Ibahagi ang Site</button>
+    </section>
+
+    <footer>
+        <p><strong>Paalala:</strong> Ang website na ito ay para sa impormasyon lamang at hindi legal na payo mula sa abogado. Sa taong 2026, ang Absolute Divorce ay hindi pa kinikilala para sa mga non-Muslim sa Pilipinas. Mangyaring kumunsulta sa Public Attorney's Office (PAO) para sa legal na tulong.</p>
+        <p>&copy; 2026 Catholic Case Divorce PH Advocacy</p>
+    </footer>
+
+</body>
+</html>
