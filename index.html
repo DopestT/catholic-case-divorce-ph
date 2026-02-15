@@ -5,49 +5,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Catholic Case for Civil Divorce | Philippines</title>
     <style>
+        /* Modern Professional Styling */
         :root {
             --primary-blue: #004a99;
             --accent-red: #ce1126;
             --bg-light: #f4f7f9;
+            --white: #ffffff;
         }
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; color: #333; line-height: 1.6; margin: 0; background: var(--bg-light); }
         
-        /* Language Bar */
-        .nav-bar { background: #fff; padding: 10px 5%; display: flex; justify-content: flex-end; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
-        .nav-bar a { text-decoration: none; color: #666; font-weight: bold; margin-left: 20px; font-size: 14px; }
+        body { 
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: var(--bg-light); 
+            color: #333;
+        }
+
+        /* Fixed Navigation Bar */
+        .nav-bar { 
+            background: var(--white); 
+            padding: 15px 5%; 
+            display: flex; 
+            justify-content: flex-end; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+        }
+        .nav-bar a { 
+            text-decoration: none; 
+            color: #666; 
+            font-weight: bold; 
+            margin-left: 25px; 
+            font-size: 14px; 
+            letter-spacing: 1px;
+        }
         .nav-bar a.active { color: var(--primary-blue); border-bottom: 2px solid var(--primary-blue); }
 
-        /* Cinematic Hero Section */
+        /* THE HEADER (HERO SECTION) */
         .hero { 
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero-image.jpg');
-            background-size: cover; background-position: center; height: 500px;
-            display: flex; flex-direction: column; justify-content: center; align-items: center;
-            color: white; text-align: center; padding: 20px;
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('hero-image.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; /* Creates a high-end parallax effect */
+            height: 550px;
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center;
+            color: var(--white); 
+            text-align: center; 
+            padding: 0 20px;
         }
-        .hero h1 { font-size: 3rem; margin: 0; max-width: 800px; text-transform: uppercase; letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-        .hero p { font-size: 1.2rem; max-width: 600px; opacity: 0.9; margin-top: 15px; }
+        .hero h1 { 
+            font-size: 3.5rem; 
+            margin: 0; 
+            max-width: 900px; 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+        }
+        .hero p { 
+            font-size: 1.3rem; 
+            max-width: 700px; 
+            margin-top: 20px; 
+            font-weight: 300;
+            line-height: 1.4;
+        }
 
-        /* Main Content "Floating" Card */
-        .container { max-width: 1100px; margin: -60px auto 50px; padding: 0 20px; position: relative; }
-        .main-card { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        /* Content Container */
+        .container { 
+            max-width: 1100px; 
+            margin: -80px auto 60px; 
+            padding: 0 20px; 
+            position: relative; 
+        }
         
-        h2 { color: var(--primary-blue); border-left: 4px solid var(--primary-blue); padding-left: 15px; }
+        .main-card { 
+            background: var(--white); 
+            padding: 50px; 
+            border-radius: 12px; 
+            box-shadow: 0 15px 45px rgba(0,0,0,0.15); 
+        }
 
-        /* Resource Grid for Buttons */
-        .resource-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 40px; }
-        .res-card { border: 1px solid #eee; padding: 25px; border-radius: 8px; transition: 0.3s; background: #fafafa; }
-        .res-card:hover { border-color: var(--primary-blue); transform: translateY(-5px); }
+        h2 { 
+            color: var(--primary-blue); 
+            font-size: 2rem;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--primary-blue);
+            padding-left: 20px;
+        }
+
+        /* Resource Grid */
+        .resource-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 30px; 
+            margin-top: 40px; 
+        }
+        .res-card { 
+            background: #fdfdfd;
+            border: 1px solid #eaeaea; 
+            padding: 30px; 
+            border-radius: 10px; 
+            transition: all 0.4s ease; 
+        }
+        .res-card:hover { 
+            border-color: var(--primary-blue); 
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
         
-        .btn { display: block; text-align: center; padding: 14px; border-radius: 4px; text-decoration: none; font-weight: bold; margin-top: 15px; transition: 0.3s; }
-        .btn-en { background: var(--primary-blue); color: white; }
-        .btn-tl { background: var(--accent-red); color: white; }
-        .btn:hover { opacity: 0.85; }
+        .btn { 
+            display: block; 
+            text-align: center; 
+            padding: 16px; 
+            border-radius: 6px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            margin-top: 15px; 
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn-en { background: var(--primary-blue); color: var(--white); }
+        .btn-tl { background: var(--accent-red); color: var(--white); }
+        .btn:hover { filter: brightness(1.2); }
 
-        /* Evidence Section */
-        .evidence-preview { margin-top: 50px; text-align: center; padding: 20px; background: #fff; border-top: 2px solid #eee; }
-        .evidence-preview img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-top: 20px; }
+        /* Evidence Image Section */
+        .evidence-preview { 
+            margin-top: 60px; 
+            text-align: center; 
+            border-top: 1px solid #eee; 
+            padding-top: 40px;
+        }
+        .evidence-preview img { 
+            max-width: 100%; 
+            height: auto; 
+            border-radius: 12px; 
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1); 
+            margin-top: 30px; 
+        }
 
-        footer { text-align: center; padding: 50px 20px; font-size: 13px; color: #888; border-top: 1px solid #ddd; background: white; }
+        footer { 
+            text-align: center; 
+            padding: 60px 20px; 
+            font-size: 13px; 
+            color: #777; 
+            background: var(--white);
+            border-top: 1px solid #eee;
+        }
     </style>
 </head>
 <body>
@@ -58,42 +165,42 @@
     </nav>
 
     <header class="hero">
-        <h1>Justice for the Abandoned</h1>
-        <p>A civil-law policy resource grounded in human dignity, Catholic social teaching, and the common good.</p>
+        <h1>The Catholic Case for Civil Divorce</h1>
+        <p>A policy resource for legislators and families grounded in human dignity, church teaching, and the common good.</p>
     </header>
 
     <main class="container">
         <div class="main-card">
             <h2>Why This Matters in Practice</h2>
-            <p>The absence of absolute divorce does not prevent marital breakdown; it merely changes who is allowed to recover from it. In practice, the current framework traps women in abusive marriages and disproportionately harms the poor by making legal relief effectively paywalled.</p>
+            <p style="font-size: 1.1rem; color: #555;">The absence of absolute divorce does not prevent marital breakdown; it merely changes who is allowed to recover from it. Under the current framework, victims remain trapped in abusive marriages while the poor are denied access to legal remedies.</p>
             
             <div class="resource-grid">
                 <div class="res-card">
                     <h3>🏛 Policy & Statistics</h3>
-                    <p>Briefings for congressional staff and media, featuring 2026 national indicators and legal analysis.</p>
-                    <a href="guide-en.pdf" class="btn btn-en" download>Download English Guide</a>
+                    <p>Comprehensive briefs for media and congressional staff regarding 2026 national indicators and legal analysis.</p>
+                    <a href="guide-en.pdf" class="btn btn-en" download>English Policy Brief</a>
                     <a href="guide-tl.pdf" class="btn btn-tl" download>Gabay sa Batas (Tagalog)</a>
                 </div>
 
                 <div class="res-card">
                     <h3>✝️ Doctrine & Law</h3>
-                    <p>Analysis of civil divorce through a lens that respects Catholic doctrine while protecting legal rights.</p>
+                    <p>Analysis of civil divorce through a doctrine-respecting lens for the Philippine civil context.</p>
                     <a href="catholic-en.pdf" class="btn btn-en" download>Catholic Brief (EN)</a>
-                    <a href="catholic-tl.pdf" class="btn btn-tl" download>Gabay sa Simbahan (TL)</a>
+                    <a href="catholic-tl.pdf" class="btn btn-tl" download>Gabay ng Simbahan (TL)</a>
                 </div>
             </div>
 
             <div class="evidence-preview">
-                <h3>Required Legal Evidence</h3>
-                <p>17.5% of Filipino women age 15-49 experienced violence (2022 NDHS). Use the checklist below to organize your case.</p>
-                <img src="evidence-table.png" alt="Evidence Checklist">
+                <h3>Table of Required Evidence</h3>
+                <p>17.5% of Filipino women age 15-49 experienced violence (2022 NDHS). Use this checklist to organize your case documentation.</p>
+                <img src="evidence-table.png" alt="Evidence Table">
             </div>
         </div>
     </main>
 
     <footer>
-        <p><strong>Disclaimer:</strong> This resource addresses civil law only. It does not challenge Catholic doctrine on sacramental marriage. As of Feb 2026, Absolute Divorce legislation is a continuing advocacy in the Philippines.</p>
-        <p>&copy; 2026 Catholic Case for Civil Divorce Advocacy</p>
+        <p><strong>Disclaimer:</strong> This advocacy resource addresses civil law only. It does not challenge Catholic doctrine on sacramental marriage. Absolute Divorce legislation is currently under deliberation in the Philippines as of 2026.</p>
+        <p>&copy; 2026 Catholic Case for Civil Divorce Advocacy Hub</p>
     </footer>
 
 </body>
